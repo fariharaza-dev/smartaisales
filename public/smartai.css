@@ -1,0 +1,124 @@
+/* Extend the authored theme; its colors, spacing rhythm, and motion remain intact. */
+nav [data-framer-name="Links"]:has(a[href="./blog"]),
+nav [data-framer-name="Links"]:has(a[href="/blog"]) {gap:32px!important}
+nav [data-framer-name="Links"] > [data-makro-hidden] {display:none!important}
+nav [data-framer-name="Links"] > div:has(a[data-makro-hidden]),
+nav [data-framer-name="Links"] > div:has(p[data-makro-hidden]) {display:none!important}
+.smartai-footer-wordmark {font-size:var(--smartai-wordmark-size,100px)!important;letter-spacing:-.065em!important;line-height:1.12!important;white-space:nowrap}
+.smartai-price {font-size:48px!important;line-height:1.2!important;font-weight:400!important;letter-spacing:-.045em!important;white-space:nowrap!important}
+.smartai-tour-poster {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:inherit;pointer-events:none}
+.smartai-hidden-video {visibility:hidden!important}
+.smartai-tour-dialog {width:min(1000px,92vw);padding:0;border:0;border-radius:24px;background:#edf0f7;overflow:hidden;box-shadow:0 24px 100px #0006}
+.smartai-tour-dialog::backdrop{background:#161820d9;backdrop-filter:blur(6px)}
+.smartai-tour-image{display:block;width:100%;max-height:68vh;object-fit:contain}
+.smartai-tour-toolbar{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 24px;background:#fff;font:16px/1.4 Arial,sans-serif;color:#35363d}
+.smartai-tour-toolbar button{height:44px;min-width:44px;border:0;border-radius:14px;background:#d8ff57;color:#35363d;font:20px Arial;cursor:pointer;transition:background .2s,transform .2s}
+.smartai-tour-toolbar button:hover{background:#cbf444;transform:translateY(-2px)}
+.smartai-tour-close{position:absolute;right:14px;top:14px;width:40px;height:40px;border:0;border-radius:50%;background:#35363d;color:white;font:26px Arial;cursor:pointer;z-index:2}
+.smartai-tour-caption{flex:1;text-align:center}
+.smartai-tour-example{font-size:12px;color:#858891;display:block}
+.smartai-image{object-fit:cover}
+@media(max-width:809px){
+ nav [data-framer-name="Links"]:has(a[href="./blog"]),nav [data-framer-name="Links"]:has(a[href="/blog"]){gap:24px!important}
+ .smartai-footer-wordmark{font-size:var(--smartai-wordmark-size,48px)!important}
+ .smartai-price{font-size:38px!important}
+ .smartai-tour-toolbar{padding:14px;gap:10px;font-size:14px}
+}
+
+.smartai-channel{width:128px!important;height:44px!important;background:none!important;-webkit-mask:none!important;mask:none!important;display:flex!important;align-items:center!important;justify-content:center!important;border:1px solid #c5c9d0!important;border-radius:12px!important;color:#777b84!important;overflow:hidden!important}
+.smartai-channel:before,.smartai-channel:after,.smartai-channel>:not(.smartai-channel-label){display:none!important}
+.smartai-channel-label{font:500 16px/1.2 Arial,sans-serif;white-space:nowrap}
+
+/* Keep the stacked-card dashboard titles inside their illustration pane. */
+:is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="benefits-tiles"] {
+ background:#edf0f7;
+}
+:is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="benefits-tiles"] > [data-framer-background-image-wrapper] {
+ top:24px!important;bottom:24px!important;left:calc(50% + 16px)!important;right:24px!important;
+ border-radius:16px!important;opacity:1;
+}
+:is(#card-2,#card-4) [data-framer-name="benefits-tiles"] > [data-framer-background-image-wrapper] {
+ left:24px!important;right:calc(50% + 16px)!important;
+}
+:is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="benefits-tiles"] > [data-framer-background-image-wrapper] > img {
+ object-fit:contain!important;object-position:center top!important;
+}
+/* Remove the old decorative blending that washed out the functional UI. */
+:is(#card-1,#card-2,#card-3,#card-4) :is(.framer-19wy0x4,.framer-mxate3,.framer-4utvpy,.framer-d3q6ro) {
+ mix-blend-mode:normal!important;-webkit-mask:none!important;mask:none!important;
+}
+:is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="IMG"] div:has(> [data-framer-background-image-wrapper] > img) {
+ background:#fff;box-shadow:0 10px 32px #35363d24,0 0 0 1px #d2d7e2;
+}
+:is(#card-1,#card-2,#card-3,#card-4) .framer-ecwiy2 {opacity:1!important}
+@media(max-width:809px){
+ :is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="benefits-tiles"] > [data-framer-background-image-wrapper] {
+  top:20px!important;left:20px!important;right:20px!important;bottom:auto!important;height:256px!important;
+ }
+}
+/* Keep supporting widgets fully inside each panel, with breathing room for titles. */
+#card-1 .framer-p7bzjs {left:78%!important;top:29%!important;width:34%!important}
+#card-1 .framer-p98l3e {left:21%!important;top:78%!important}
+#card-2 :is(.framer-xscp0a,.framer-5r8nbm), #card-4 .framer-gvxdlg {display:none!important}
+#card-2 .framer-ecwiy2 {left:29%!important;top:42%!important;width:42%!important;height:auto!important}
+#card-2 .framer-1irziww {left:70%!important;top:65%!important;width:42%!important;height:auto!important}
+#card-3 .framer-1482h3k {left:22%!important;top:27%!important;width:30%!important}
+#card-3 .framer-gwfbza {left:76%!important;top:79%!important;width:32%!important}
+#card-3 .framer-cay20p {top:53%!important}
+#card-4 .framer-dslb6p {left:73%!important;top:27%!important;width:30%!important}
+#card-4 .framer-z2rlp6 {left:23%!important;top:79%!important;width:30%!important}
+#card-4 .framer-q62br4 {top:53%!important}
+@media(max-width:809px){
+ :is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="IMG"] {height:400px!important}
+ :is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="benefits-tiles"] > [data-framer-background-image-wrapper] {height:376px!important}
+ #card-1 .framer-16ejekt {width:55%!important;height:auto!important;top:54%!important}
+ :is(#card-3 .framer-cay20p,#card-4 .framer-q62br4) {width:80%!important;height:auto!important}
+}
+/* Give each widget its own readable area instead of covering another card's text. */
+#card-1 .framer-16ejekt {width:48%!important;height:auto!important;top:40%!important}
+#card-1 .framer-p7bzjs {left:73%!important;top:80%!important;width:30%!important}
+#card-1 .framer-p98l3e {left:27%!important;top:80%!important;width:30%!important}
+#card-3 .framer-1482h3k {left:27%!important;top:80%!important}
+#card-3 .framer-gwfbza {left:73%!important;top:80%!important;width:30%!important}
+#card-3 .framer-cay20p {top:40%!important}
+#card-4 .framer-dslb6p {left:73%!important;top:80%!important}
+#card-4 .framer-z2rlp6 {left:27%!important;top:80%!important}
+#card-4 .framer-q62br4 {top:40%!important}
+@media(max-width:809px){
+ :is(#card-1,#card-2,#card-3,#card-4) [data-framer-name="IMG"] {height:clamp(480px,110vw,800px)!important}
+ #card-1 .framer-16ejekt {width:min(60%,300px)!important}
+}
+
+/* Bento cards: keep copy and animated UI on intentional, opaque surfaces. */
+#bento-section [data-framer-name^="card-"] > [data-framer-background-image-wrapper] {display:none!important}
+#bento-section :is([data-framer-name="card-gravity"],[data-framer-name="card-rotator"],[data-framer-name="card-gallery"]) {background:#45464e!important;border:1px solid #62646d}
+#bento-section [data-framer-name="card-notification"] {background:#edf0f7!important}
+#bento-section :is(.framer-1emby12,.framer-p9obvu,.framer-1jwxluu) h4 {color:#fff!important;--framer-text-color:#fff!important}
+#bento-section :is(.framer-1emby12,.framer-p9obvu,.framer-1jwxluu) p {color:#f0f1f5!important;--framer-text-color:#f0f1f5!important}
+#bento-section .framer-n9czzy {-webkit-mask:none!important;mask:none!important}
+#bento-section .framer-n9czzy p {color:#535762!important;--framer-text-color:#535762!important}
+#bento-section [data-framer-name="card-rotator"] :is(h1,p) {color:#fff!important;--framer-text-color:#fff!important}
+#bento-section [data-framer-name="card-rotator"] .framer-qm1rqa {--21h8s6:#35363d!important}
+#bento-section [data-framer-name="card-gallery"] > :not(.framer-1jwxluu) p {color:#535762!important;--framer-text-color:#535762!important}
+#bento-section [data-framer-name="card-notification"] .framer-text {--token-92f79d8c-5684-4d83-98a0-358c9a114f12:#626875}
+/* Scroll through the workspace sequence; no elapsed-time advancement. */
+.smartai-gallery-scroll {width:100%;height:calc(600px + 200vh);position:relative}
+.smartai-gallery-scroll > .smartai-gallery-pin {position:sticky;top:80px;width:100%}
+.smartai-gallery-mobile,.smartai-gallery-mobile > .smartai-gallery-pin {width:100%;height:100%}
+.smartai-gallery-scroll [data-framer-name^="tab"][data-framer-name$="Button"] {cursor:pointer}
+/* A single quote offer on each pricing tab. */
+#pricing .framer-s0p7o9 {justify-content:center!important}
+#pricing .framer-s0p7o9 > :is(.framer-arfr0s,.framer-zfovun) {display:none!important}
+#pricing .framer-s0p7o9 > .framer-15ee17k {flex:1 1 100%!important;width:100%!important;min-height:690px}
+@media(max-width:809px){
+ #pricing .framer-s0p7o9 > .framer-15ee17k {min-height:0;width:100%!important}
+ #pricing .framer-1ffelrd {max-width:100%!important;width:100%!important}
+ #pricing .framer-1ffelrd > [role="button"] {padding:12px 8px!important}
+ #pricing .framer-1ffelrd > [role="button"] p {font-size:13px!important;white-space:nowrap}
+}
+/* The animated metric and its label need solid white on the charcoal card. */
+#bento-section [data-framer-name="card-rotator"] .framer-ixmii2-container :is(h1,p,span) {color:#fff!important;--framer-text-color:#fff!important}
+#bento-section [data-framer-name="card-rotator"] .framer-ixmii2-container span[style*="opacity"] {opacity:1!important}
+/* Use the supplied SmartAi Specialist mark throughout the existing logo variants. */
+.framer-6ZoTL {-webkit-mask:url('/assets/smartai/ai-specialist-logo.svg') center/contain no-repeat!important;mask:url('/assets/smartai/ai-specialist-logo.svg') center/contain no-repeat!important;background-color:var(--o4jego,#2f2f33)!important}
+.framer-0r6Lj .framer-6ZoTL {width:47px!important;height:35px!important}

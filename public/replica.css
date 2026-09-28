@@ -1,0 +1,33 @@
+/* Preserve Makro's authored layout and motion, scoped to the selected pages. */
+.framer-viSkJ,
+.framer-kmqxk7-container,
+.framer-RJWfb,
+#__framer-badge-container,
+a[href*="buy.polar.sh"],
+a[href="/home-alt"], a[href="/home-alt-2"],
+a[href="./home-alt"], a[href="./home-alt-2"],
+a[href="/changelog"], a[href="./changelog"],
+.framer-vxgbxp:has(a[href*="terms-of-use"]),
+.framer-vxgbxp:has(a[href*="privacy-policy"]),
+[data-makro-hidden] { display: none !important; }
+
+a:focus-visible, button:focus-visible, [role="button"]:focus-visible,
+input:focus-visible, textarea:focus-visible, select:focus-visible {
+  outline: 2px solid #829b25 !important;
+  outline-offset: 5px;
+}
+.makro-form-status {
+  width: 100%; margin: 0; padding: 16px; border-radius: 12px;
+  background: #eff5df; color: #25272c; font: 15px/1.5 Arial, sans-serif;
+  white-space: normal;
+}
+.makro-form-status[data-error="true"] {background:#fff2eb;color:#763322}
+form[aria-busy="true"] button {cursor:wait;opacity:.6;pointer-events:none}
+.makro-video-dialog{padding:0;border:0;border-radius:20px;background:#17191d;width:min(1000px,92vw);overflow:visible;box-shadow:0 24px 100px #0006}
+.makro-video-dialog::backdrop{background:#161820d9;backdrop-filter:blur(6px)}
+.makro-video-dialog video{display:block;width:100%;max-height:80vh;border-radius:20px}
+.makro-video-close{position:absolute;z-index:1;right:12px;top:12px;width:40px;height:40px;border:0;border-radius:50%;background:white;color:#292b2f;font:28px Arial;cursor:pointer}
+@media (prefers-reduced-motion: reduce) {
+  html {scroll-behavior:auto!important}
+  .lenis {scroll-behavior:auto!important}
+}
